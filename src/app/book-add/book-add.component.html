@@ -1,0 +1,14 @@
+<h2>Lägg till ny bok</h2>
+<form (submit)="addBook()">
+  <!-- Input fields to add new book properties (e.g., title, author, publication date) -->
+  <div>
+    <label for="title">Titel:</label>
+    <input type="text" id="title" [(ngModel)]="newBook.title" name="title" required>
+  </div>
+  <div>
+    <label for="author">Författare:</label>
+    <input type="text" id="author" [(ngModel)]="newBook.author" name="author" required>
+  </div>
+  <!-- Add more input fields as needed for other properties -->
+ <button type="submit">Lägg till bok</button>
+</form>

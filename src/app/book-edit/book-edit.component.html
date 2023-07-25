@@ -1,0 +1,16 @@
+<h2>Redigera bok</h2>
+<form (submit)="updateBook()">
+
+
+   <div>
+     <label for="title">Titel:</label>
+     <input type="text" id="title" [(ngModel)]="book.title" name="title" required>
+   </div>
+   <div>
+     <label for="author">Författare:</label>
+     <input type="text" id="author" [(ngModel)]="book.author" name="author" required>
+   </div>
+ 
+
+   <button type="submit">Uppdatera bok</button>
+</form>

@@ -1,0 +1,17 @@
+
+
+<h2>Boklista</h2>
+<ul>
+  <li *ngFor="let book of books">
+    
+    {{ book.title }} - {{ book.author }} ({{ book.publicationDate | date:'medium' }})
+
+
+    <button (click)="deleteBook(book.id)">Ta bort</button>
+    <button (click)=" goToEditPage(book.id)">Redigera</button>
+
+
+  </li>
+ 
+</ul>
+<button (click)="goToAddPage()">Skapa en ny bok</button>
