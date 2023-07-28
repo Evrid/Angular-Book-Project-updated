@@ -2,7 +2,7 @@
 
 Responsive CRUD application with token management and built in Angular 15 and .NET 6 C# API
 
- 
+ main branch
 
  The goal is to create a responsive CRUD web application using Angular 15 for the front-end and .NET 6 C# for the back-end API. Additionally, you need to implement token management for user authentication, use Bootstrap and Font Awesome icons for styling, and add a "My Quotes" page where users can add and view their favorite quotes.
 
