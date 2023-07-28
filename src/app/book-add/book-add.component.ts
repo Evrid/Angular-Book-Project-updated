@@ -8,7 +8,7 @@ import { BookService } from '../book.service';
   styleUrls: ['./book-add.component.css'],
 })
 export class BookAddComponent implements OnInit {
-  newBook: any = {}; // Replace 'any' with the interface representing your book model
+  newBook: any = {}; 
 
   constructor(private router: Router, private bookService: BookService) {}
 
@@ -25,5 +25,9 @@ export class BookAddComponent implements OnInit {
       }
     });
     
+  }
+
+  goHome() {
+    this.router.navigateByUrl('');
   }
 }

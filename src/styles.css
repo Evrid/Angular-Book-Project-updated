@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+/* Regular styles for larger screens */
+.navbar {
+    font-size: 18px;
+    height: 80px;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 767px) {
+    .navbar {
+      font-size: 14px;
+      height: 60px;
+    }
+  }
+  
+
+  /* Light Theme Styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  /* Dark Theme Styles */
+  body.dark-theme {
+    background-color: #2b2b2b;
+    color: #ffffff;
+  }
+  

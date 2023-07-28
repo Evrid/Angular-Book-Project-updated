@@ -1,16 +1,19 @@
-<h2>Redigera bok</h2>
-<form (submit)="updateBook()">
+<div class="container">
+  <h2>Redigera bok</h2>
+  <form (submit)="updateBook()">
+    <!-- Input fields to update book properties (e.g., title, author) -->
+    <div class="form-group">
+      <label for="title">Titel:</label>
+      <input type="text" id="title" [(ngModel)]="book.title" name="title" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="author">Författare:</label>
+      <input type="text" id="author" [(ngModel)]="book.author" name="author" required class="form-control">
+    </div>
+    <!-- Add more input fields as needed for other properties -->
 
-
-   <div>
-     <label for="title">Titel:</label>
-     <input type="text" id="title" [(ngModel)]="book.title" name="title" required>
-   </div>
-   <div>
-     <label for="author">Författare:</label>
-     <input type="text" id="author" [(ngModel)]="book.author" name="author" required>
-   </div>
- 
-
-   <button type="submit">Uppdatera bok</button>
-</form>
+    <button type="submit" class="btn btn-primary">
+      <i class="fas fa-edit"></i> Uppdatera bok
+    </button>
+  </form>
+</div>

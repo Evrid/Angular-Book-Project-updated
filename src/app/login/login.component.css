@@ -1,0 +1,7 @@
+.error-message {
+    color: red; /* Sets the text color to red */
+    background-color: #ffe6e6; /* Sets the background color to a light red/pink */
+    padding: 10px; /* Adds some padding to the div for better spacing */
+    border: 1px solid #ff0000; /* Adds a red border around the div */
+  }
+  

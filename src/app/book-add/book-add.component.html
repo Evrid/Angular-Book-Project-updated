@@ -1,14 +1,22 @@
-<h2>Lägg till ny bok</h2>
-<form (submit)="addBook()">
-  <!-- Input fields to add new book properties (e.g., title, author, publication date) -->
-  <div>
-    <label for="title">Titel:</label>
-    <input type="text" id="title" [(ngModel)]="newBook.title" name="title" required>
-  </div>
-  <div>
-    <label for="author">Författare:</label>
-    <input type="text" id="author" [(ngModel)]="newBook.author" name="author" required>
-  </div>
-  <!-- Add more input fields as needed for other properties -->
- <button type="submit">Lägg till bok</button>
-</form>
+<div class="container">
+  <h2>Lägg till ny bok</h2>
+  <form (submit)="addBook()">
+    <!-- Input fields to add new book properties (e.g., title, author, publication date) -->
+    <div class="form-group">
+      <label for="title">Titel:</label>
+      <input type="text" id="title" [(ngModel)]="newBook.title" name="title" required class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="author">Författare:</label>
+      <input type="text" id="author" [(ngModel)]="newBook.author" name="author" required class="form-control">
+    </div>
+    <!-- Add more input fields as needed for other properties -->
+    <button type="submit" class="btn btn-primary">
+      <i class="fas fa-plus"></i> Lägg till bok
+    </button>
+  </form>
+
+  <button (click)="goHome()" class="btn btn-secondary mt-3">
+    <i class="fas fa-arrow-left"></i> Tillbaka till hemmet
+  </button>
+</div>

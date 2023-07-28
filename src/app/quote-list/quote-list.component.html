@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <div *ngFor="let quote of quotes" class="quote-item mb-3">
+    <p>{{ quote.content }}</p>
+    <p>Author: {{ quote.author }}</p>
+    <button class="btn btn-danger" (click)="deleteQuote(quote.id)">Delete</button>
+  </div>
+  
+  <form (submit)="addQuote(newQuote.value, $event); newQuote.value = '';" class="add-quote-form">
+    <div class="form-group">
+      <input type="text" #newQuote required class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">
+      <i class="fas fa-plus"></i> Add Quote
+    </button>
+  </form>
+
+  <button (click)="goHome()" class="btn btn-secondary mt-3">
+    <i class="fas fa-arrow-left"></i> Back to home
+  </button>
+</div>

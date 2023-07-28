@@ -1,17 +1,36 @@
+<div class="container">
+  <h2>Boklista</h2>
 
+  <!-- Show different content based on authentication status -->
+  <div *ngIf="isAuthenticated; else loginMessage">
+    <p>Welcome, {{ username }}!</p>
+    <ul>
+      <li *ngFor="let book of books">
+        {{ book.title }} - {{ book.author }} ({{ book.publicationDate | date:'medium' }})
+        <button class="btn btn-danger" (click)="deleteBook(book.id)">
+          <i class="fas fa-trash"></i> Ta bort
+        </button>
+        <button class="btn btn-primary" (click)="goToEditPage(book.id)">
+          <i class="fas fa-edit"></i> Redigera
+        </button>
+      </li>
+    </ul>
+    <button class="btn btn-success" (click)="goToAddPage()">
+      <i class="fas fa-plus"></i> Skapa en ny bok
+    </button>
+    <button class="btn btn-secondary" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </button>
+    <button class="btn btn-info" (click)="goToQuotes()">
+      <i class="fas fa-quote-right"></i> My Quotes
+    </button>
+  </div>
 
-<h2>Boklista</h2>
-<ul>
-  <li *ngFor="let book of books">
-    
-    {{ book.title }} - {{ book.author }} ({{ book.publicationDate | date:'medium' }})
-
-
-    <button (click)="deleteBook(book.id)">Ta bort</button>
-    <button (click)=" goToEditPage(book.id)">Redigera</button>
-
-
-  </li>
- 
-</ul>
-<button (click)="goToAddPage()">Skapa en ny bok</button>
+  <!-- Template for displaying the login message when not authenticated -->
+  <ng-template #loginMessage>
+    <p>Please log in to CRUD books</p>
+    <button class="btn btn-primary" (click)="redirectToLogin()">
+      <i class="fas fa-sign-in-alt"></i> Go to Login
+    </button>
+  </ng-template>
+</div>
